@@ -1,0 +1,15 @@
+﻿@model Recipes.Common.Admin.BindingModels.ReviewDeletionBindingModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Are you sure you want to delete @Model.UserName's review for @Model.Title ?</h2>
+
+<form asp-area="Admin" asp-controller="Reviews" asp-action="Delete" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-push-2">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-area="Admin" asp-controller="Reviews" asp-action="Index" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>

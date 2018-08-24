@@ -1,0 +1,52 @@
+﻿@model Recipes.Web.Pages.Recipes.DetailsModel
+
+@{
+    <h4>Average Rating: @Model.AverageRating</h4>
+
+    if (!Model.Ratings.Any(r => r.RecipeId == Model.Id && r.UserId == Model.CurrentUserId))
+    {
+        <h4><a asp-page="/Recipes/Rate" asp-route-id="@Model.Id" class="btn btn-default">Rate</a></h4>
+    }
+    else
+    {
+        <h4 class="text-success">Rated!</h4>
+    }
+
+    <br />
+
+    <h4>Favourites: @Model.UserFavourites.Count()</h4>
+
+    if (!Model.UserFavourites.Any(uf => uf.RecipeId == Model.Id && uf.UserId == Model.CurrentUserId))
+    {
+        <h4><a asp-controller="Recipes" asp-action="Favourite" asp-route-id="@Model.Id" class="btn btn-default">Favourite</a></h4>
+    }
+    else
+    {
+        <h4 class="text-success">Favourited!</h4>
+    }
+
+    <br />
+
+    <h4>Reviews: @Model.Reviews.Count()</h4>
+    <a asp-page="/Reviews/All" asp-route-id="@(Model.Id)" class="btn btn-default">View Reviews</a>
+
+    if (!Model.Reviews.Any(r => r.RecipeId == Model.Id && r.UserId == Model.CurrentUserId))
+    {
+        <h4><a asp-page="/Reviews/Create" asp-route-id="@Model.Id" class="btn btn-default">Add Review</a></h4>
+    }
+    else
+    {
+        <h4 class="text-success">Reviewed!</h4>
+    }
+
+    <br />
+
+    if (!Model.Notes.Any(n => n.RecipeId == Model.Id && n.UserId == Model.CurrentUserId))
+    {
+        <h4><a asp-page="/Notes/Create" asp-route-id="@(Model.Id)" class="btn btn-default">Add Note</a></h4>
+    }
+    else
+    {
+        <h4 class="text-success">Note created!</h4>
+    }
+}

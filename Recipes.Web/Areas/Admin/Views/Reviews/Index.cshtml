@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ReviewViewModel>
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h2>All Reviews</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Review by</th>
+            <th>For recipe</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.DisplayForModel()
+    </tbody>
+</table>

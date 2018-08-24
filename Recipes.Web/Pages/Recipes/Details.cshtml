@@ -1,0 +1,15 @@
+﻿@page "{id}"
+@model Recipes.Web.Pages.Recipes.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Title</h2>
+<h5>by @Model.Author</h5>
+<div class="container break-text">
+    <p>
+        @Model.Instructions
+    </p>
+</div>
+
+@Html.DisplayForModel()

@@ -1,0 +1,21 @@
+﻿@page "{id}"
+@model Recipes.Web.Pages.Recipes.RateModel
+@{
+    ViewData["Title"] = "Rate";
+}
+
+<h2>Rate @Model.Recipe.Title</h2>
+<h5>Please use a number between 1 (the worst) and 5 (the best) to rate this recipe.</h5>
+
+<form asp-page="/Recipes/Rate" asp-route-id="@Model.Recipe.Id" method="post" class="form-horizontal">
+    @Html.FormGroupFor(model => model.Value)
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-push-2">
+            <input type="submit" value="Rate" class="btn btn-success" />
+            <a asp-controller="Home" asp-action="Index" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

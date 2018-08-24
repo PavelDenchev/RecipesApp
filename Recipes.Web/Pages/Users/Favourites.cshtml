@@ -1,0 +1,19 @@
+﻿@page
+@model Recipes.Web.Pages.Users.FavouritesModel
+@{
+    ViewData["Title"] = "Favourites";
+}
+
+<h2>Favourite recipes</h2>
+
+@{
+    if (Model.Recipes.Count() == 0)
+    {
+        <h4>You have not favourited any recipes yet.</h4>
+    }
+    else
+    {
+        <partial name="_RecipeTablePartial" />
+    }
+}
+

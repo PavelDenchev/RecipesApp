@@ -1,0 +1,44 @@
+﻿@model RecipeCreationBindingModel
+@inject RecipesDbContext dbContext
+@{
+    var categoryCollection = new List<SelectListItem>();
+
+    categoryCollection = dbContext.Categories
+        .Select(cs => new SelectListItem()
+        {
+            Text = cs.Name,
+            Value = cs.Id.ToString()
+        }).ToList();
+
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create Recipe</h2>
+
+<form asp-controller="Recipes" asp-action="Create" method="post" class="form-horizontal">
+    @Html.FormGroupFor(model => model.Title)
+    <div class="form-group">
+        <label asp-for="Instructions" class="control-label col-sm-2"></label>
+        <div class="col-sm-10">
+            <textarea asp-for="Instructions" class="form-control" rows="6" placeholder="Enter ingredients required and instructions to prepare the meal."></textarea>
+            <span class="field-validation-valid text-danger" data-valmsg-for="Instructions" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="CategoryId" class="control-label col-sm-2"></label>
+        <div class="col-sm-10">
+            <select asp-for="CategoryId" class="form-control" asp-items="categoryCollection">
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-push-2">
+            <input type="submit" value="Create" class="btn btn-success" />
+            <a asp-controller="Home" asp-action="Index" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

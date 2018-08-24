@@ -1,0 +1,14 @@
+﻿@model IEnumerable<CategoryViewModel>
+@{
+    ViewData["Title"] = "Cooking Styles";
+}
+
+<h2>Categories</h2>
+
+<partial name="_CategoryTablePartial" />
+
+<br />
+
+<a asp-area="Admin" asp-controller="Categories" asp-action="Create" class="btn btn-success">
+    Create new category
+</a>

@@ -1,0 +1,16 @@
+﻿@page
+@model Recipes.Web.Pages.Recipes.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>All Recipes</h2>
+
+@if (Model.Recipes.Count() == 0)
+{
+    <h4>There are no recipes yet.</h4>
+}
+else
+{
+    <partial name="_RecipeTablePartial" />
+}

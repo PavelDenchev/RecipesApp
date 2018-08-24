@@ -1,0 +1,11 @@
+﻿@model Recipes.Web.Pages.Users.ReviewsModel
+
+@foreach (var review in Model.Reviews)
+{
+    <tr>
+        <td>@review.Recipe.Title</td>
+        <td><a asp-page="/Recipes/Details" asp-route-id="@(review.RecipeId)" class="btn btn-default">View Recipe</a></td>
+        <td><a asp-page="/Reviews/Details" asp-route-id="@(review.Id)" class="btn btn-default">View Review</a></td>
+        <td><a asp-controller="Reviews" asp-action="Delete" asp-route-id="@(review.Id)" class="btn btn-danger">Delete Review</a></td>
+    </tr>
+}

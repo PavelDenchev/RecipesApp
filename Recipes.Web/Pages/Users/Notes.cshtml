@@ -1,0 +1,28 @@
+﻿@page
+@model Recipes.Web.Pages.Users.NotesModel
+@{
+    ViewData["Title"] = "Notes";
+}
+
+<h2>My Notes</h2>
+
+@{
+    if (Model.Notes.Count() == 0)
+    {
+        <h4>You do not have any notes yet.</h4>
+    }
+    else
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Note for</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @Html.DisplayForModel()
+            </tbody>
+        </table>
+    }
+}

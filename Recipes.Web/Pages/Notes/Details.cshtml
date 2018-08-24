@@ -1,0 +1,13 @@
+﻿@page "{id}"
+@model Recipes.Web.Pages.Notes.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Note for @Model.RecipeTitle</h2>
+
+<div class="container break-text">
+    <p>
+        @Model.NoteContent
+    </p>
+</div>

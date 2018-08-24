@@ -1,0 +1,24 @@
+﻿@model UserViewModel
+
+<tr>
+    <td>@Model.Username</td>
+    <td>@Model.Email</td>
+    @{
+        if (Model.LockoutEnd == null)
+        {
+            <td><a asp-area="Admin" asp-controller="Users" asp-action="Ban" asp-route-id="@Model.Id" class="btn btn-danger">Ban</a></td>
+        }
+        else
+        {
+            <td>
+                <form asp-area="Admin" asp-controller="Users" asp-action="Unban" asp-route-id="@Model.Id" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <input type="submit" value="Unban" class="btn btn-success" />
+                        </div>
+                    </div>
+                </form>
+            </td>
+        }
+    }
+</tr>

@@ -1,0 +1,8 @@
+﻿@model Recipes.Web.Pages.Reviews.AllModel
+
+@foreach (var review in Model.Reviews)
+{
+    <tr>
+        <td><a asp-page="/Reviews/Details" asp-route-id="@review.Id">@review.Author.UserName</a></td>
+    </tr>
+}

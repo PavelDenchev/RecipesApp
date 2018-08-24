@@ -1,0 +1,7 @@
+﻿@model RecipeViewModel
+
+<tr>
+    <td>@Model.Title</td>
+    <td><a asp-page="/Recipes/Details" asp-route-id="@(Model.Id)" class="btn btn-default">View Recipe</a></td>
+    <td><a asp-area="Admin" asp-controller="Recipes" asp-action="Delete" asp-route-id="@(Model.Id)" class="btn btn-danger">Delete Recipe</a></td>
+</tr>

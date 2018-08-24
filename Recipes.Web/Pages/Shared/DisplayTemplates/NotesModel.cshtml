@@ -1,0 +1,10 @@
+﻿@model Recipes.Web.Pages.Users.NotesModel
+
+@foreach (var note in Model.Notes)
+{
+    <tr>
+        <td>@note.Recipe.Title</td>
+        <td><a asp-page="/Notes/Details" asp-route-id="@(note.Id)" class="btn btn-default">View Note</a></td>
+        <td><a asp-page="/Notes/Delete" asp-route-id="@(note.Id)" class="btn btn-danger">Delete Note</a></td>
+    </tr>
+}

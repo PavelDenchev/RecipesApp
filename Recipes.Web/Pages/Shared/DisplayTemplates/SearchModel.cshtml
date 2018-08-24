@@ -1,0 +1,47 @@
+﻿@model Recipes.Web.Pages.Recipes.SearchModel
+
+@foreach (var recipe in Model.RecipesFound)
+{
+    <tr>
+        <td>@recipe.Title</td>
+        <td><a asp-page="/Recipes/Details" asp-route-id="@(recipe.Id)" class="btn btn-default">View Recipe</a></td>
+        <td><a asp-page="/Reviews/All" asp-route-id="@(recipe.Id)" class="btn btn-default">View Reviews</a></td>
+        @{
+            if (!recipe.Notes.Any(n => n.RecipeId == recipe.Id && n.UserId == Model.CurrentUserId))
+            {
+                <td><a asp-page="/Notes/Create" asp-route-id="@(recipe.Id)" class="btn btn-default">Add Note</a></td>
+            }
+            else
+            {
+                <td class="text-success">Note created!</td>
+            }
+
+            if (!recipe.Ratings.Any(r => r.RecipeId == recipe.Id && r.UserId == Model.CurrentUserId))
+            {
+                <td><a asp-page="/Recipes/Rate" asp-route-id="@recipe.Id" class="btn btn-default">Rate</a></td>
+            }
+            else
+            {
+                <td class="text-success">Rated!</td>
+            }
+
+            if (!recipe.UsersFavourited.Any(uf => uf.RecipeId == recipe.Id && uf.UserId == Model.CurrentUserId))
+            {
+                <td><a asp-controller="Recipes" asp-action="Favourite" asp-route-id="@recipe.Id" class="btn btn-default">Favourite</a></td>
+            }
+            else
+            {
+                <td class="text-success">Favourited!</td>
+            }
+
+            if (!recipe.Reviews.Any(r => r.RecipeId == recipe.Id && r.UserId == Model.CurrentUserId))
+            {
+                <td><a asp-page="/Reviews/Create" asp-route-id="@recipe.Id" class="btn btn-default">Add Review</a></td>
+            }
+            else
+            {
+                <td class="text-success">Reviewed!</td>
+            }
+        }
+    </tr>
+}

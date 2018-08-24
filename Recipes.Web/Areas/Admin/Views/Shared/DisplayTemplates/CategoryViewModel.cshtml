@@ -1,0 +1,6 @@
+﻿@model CategoryViewModel
+
+<tr>
+    <td>@Model.Name</td>
+    <td><a asp-area="Admin" asp-controller="Categories" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a></td>
+</tr>

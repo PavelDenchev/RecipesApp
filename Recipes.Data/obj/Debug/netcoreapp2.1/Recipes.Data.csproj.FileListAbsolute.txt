@@ -1,0 +1,14 @@
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Data.deps.json
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Data.dll
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.csproj.CoreCompileInputs.cache
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.AssemblyInfoInputs.cache
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.AssemblyInfo.cs
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.csprojAssemblyReference.cache
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Models.dll
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Data.pdb
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Models.pdb
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.csproj.CopyComplete
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.dll
+c:\users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\obj\Debug\netcoreapp2.1\Recipes.Data.pdb
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Constants.dll
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Data\bin\Debug\netcoreapp2.1\Recipes.Constants.pdb

@@ -1,0 +1,16 @@
+﻿@page "{id}"
+@model Recipes.Web.Pages.Notes.DeleteModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Are you sure you want to delete your note for @Model.RecipeTitle ?</h2>
+
+<form asp-page="/Notes/Delete" asp-route-id="@Model.Id" method="post" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-push-2">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a asp-page="/Users/Notes" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>

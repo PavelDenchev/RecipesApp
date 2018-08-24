@@ -1,0 +1,9 @@
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\bin\Debug\netcoreapp2.1\Recipes.Constants.deps.json
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\bin\Debug\netcoreapp2.1\Recipes.Constants.dll
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\bin\Debug\netcoreapp2.1\Recipes.Constants.pdb
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.csprojAssemblyReference.cache
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.csproj.CoreCompileInputs.cache
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.AssemblyInfoInputs.cache
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.AssemblyInfo.cs
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.dll
+C:\Users\laptop_asus\documents\visual studio 2017\Projects\RecipesApp\Recipes.Constants\obj\Debug\netcoreapp2.1\Recipes.Constants.pdb

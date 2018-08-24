@@ -1,0 +1,18 @@
+﻿@page "{id}"
+@model Recipes.Web.Pages.Categories.ResultsModel
+@{
+    ViewData["Title"] = "Results";
+}
+
+<h2>All recipes in category @Model.CategoryName</h2>
+
+@{
+    if (Model.Recipes.Count() == 0)
+    {
+        <h4>There are no recipes for this category yet.</h4>
+    }
+    else
+    {
+        <partial name="_RecipeTablePartial" />
+    }
+}

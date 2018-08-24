@@ -1,0 +1,18 @@
+﻿@page
+@model Recipes.Web.Pages.Recipes.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search results for @Model.SearchTerm</h2>
+
+@{
+    if (Model.RecipesFound.Count() == 0)
+    {
+        <h4>There are no recipes that match the term "@Model.SearchTerm".</h4>
+    }
+    else
+    {
+        <partial name="_RecipeTablePartial" />
+    }
+}

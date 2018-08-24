@@ -1,0 +1,18 @@
+﻿@page
+@model Recipes.Web.Pages.Users.RecipesModel
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<h2>Your Recipes</h2>
+
+@{
+    if (Model.Recipes.Count() == 0)
+    {
+        <h4>You do not have any recipes.</h4>
+    }
+    else
+    {
+        <partial name="_RecipeTablePartial" />
+    }
+}

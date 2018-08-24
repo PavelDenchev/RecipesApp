@@ -1,0 +1,8 @@
+﻿@model ReviewViewModel
+
+<tr>
+    <td>@Model.UserName</td>
+    <td>@Model.Title</td>
+    <td><a asp-page="/Reviews/Details" asp-route-id="@(Model.Id)" class="btn btn-default">View Review</a></td>
+    <td><a asp-area="Admin" asp-controller="Reviews" asp-action="Delete" asp-route-id="@(Model.Id)" class="btn btn-danger">Delete Review</a></td>
+</tr>

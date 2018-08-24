@@ -1,0 +1,19 @@
+﻿@model CategoryCreationBindingModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Create Category</h2>
+
+<form asp-area="Admin" asp-controller="Categories" asp-action="Create" method="post" class="form-horizontal">
+    @Html.FormGroupFor(model => model.Name)
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-push-2">
+            <input type="submit" value="Create" class="btn btn-success" />
+            <a asp-area="Admin" asp-controller="Categories" asp-action="Index" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

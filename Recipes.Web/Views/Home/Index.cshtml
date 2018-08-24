@@ -1,0 +1,35 @@
+﻿@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    if (SignInManager.IsSignedIn(User))
+    {
+        <h1>Welcome @UserManager.GetUserName(User)!</h1>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><a asp-page="/Users/Recipes" class="btn btn-default">My Recipes</a></th>
+                    <th><a asp-page="/Users/Favourites" class="btn btn-default">My Favourites</a></th>
+                    <th><a asp-page="/Users/Reviews" class="btn btn-default">My Reviews</a></th>
+                    <th><a asp-page="/Users/Notes" class="btn btn-default">My Notes</a></th>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <th><a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn btn-default">Admin Page</a></th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h1>Welcome to our recipes website!</h1>
+        <h5>Please register or log in if you want to rate, review, favourite and add notes for recipes.</h5>
+    }
+}
+
